@@ -25,9 +25,9 @@
           </div>
       </div>
       <div class='banner'>
-          <div class='logo'>
+          <router-link class='logo' to='/'>
             <img id="logo" src='@/assets/graphics/LogoLight-500px.png' alt='logo' />
-          </div>
+          </router-link>
           <div class='contact-links'>
               <a target='_blank' href='mailto:mpnix@protonmail.com' class='header-link' id='email-link'></a>
               <a target='_blank' href='https://github.com/c0llid3r' class='header-link' id='github-link'></a>
@@ -735,14 +735,14 @@ body {
     align-items: center;
     width: 55%;
     max-width: 1600px;
-    opacity: 1;
+    opacity: 0;
     color: black;
     background-color: $fader-bg-color;
     margin-bottom: 4em;
     padding: 1.5em 0.5em;
     border-radius: 6px;
     box-shadow: 0 2px 8px 0px rgba($primary, 0.95);
-    // transform: translateX(25vw);
+    transform: translateX(25vw);
     transition: transform 650ms ease-out, opacity 250ms ease-in, width 400ms ease-in-out;
     
     .project-description {
@@ -856,6 +856,7 @@ body {
         background-color: $lightmode-bg-color;
         margin-bottom: 0.5rem;
         z-index: 0;
+        width: 100%;
         cursor: pointer;
 
         img {

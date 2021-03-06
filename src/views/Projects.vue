@@ -126,10 +126,37 @@ export default {
         },
         closeFullScreen () {
             document.querySelector('.fullscreen').style.display = 'none'
+        },
+        fadeProjects () {
+            const faders = document.querySelectorAll('.fader')
+
+            faders.forEach(fader => {
+                fader.classList.remove('appear')
+            })
+
+            const options = {
+                threshold: 0.4
+            }
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return
+                    } else {
+                        entry.target.classList.add('appear')
+                        observer.unobserve(entry.target)
+                    }
+                })
+            }, options)
+
+            faders.forEach(fader => {
+                observer.observe(fader)
+            })
         }
     },
     mounted () {
         window.scrollTo(0,0)
+        this.fadeProjects()
     }
 }
 </script>
