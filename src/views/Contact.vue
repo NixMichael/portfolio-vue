@@ -7,7 +7,8 @@
                     Got a question or interested in collaborating? I'd love to hear from you!
                 </p>
             </div>
-            <form name='web-message' method='POST' data-netlify='true' @submit.prevent="handleFormSubmit">
+            <form name='web-message' method='POST' data-netlify='true' data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="web-message" />
                 <input type='text' name='name' placeholder='Your name'/>
                 <input type='text' name='address' placeholder='Your email address'/>
                 <textarea name='message' placeholder='Type your message here...' rows='6'></textarea>
