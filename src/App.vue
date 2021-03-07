@@ -13,13 +13,13 @@
               </div>
               <ul>
                   <li class="link" id='link-projects'>
-                    <router-link to="/" class="links" active-class="active-link">PROJECTS</router-link>
+                    <router-link :to="{ name: 'Projects' }" class="links" active-class="active-link">PROJECTS</router-link>
                   </li>
                   <li class="link" id='link-home'>
-                    <router-link to="/about" class='links' active-class="active-link">ABOUT</router-link>
+                    <router-link :to="{ name: 'About' }" class='links' active-class="active-link">ABOUT</router-link>
                   </li>
                   <li class="link" id='link-contact'>
-                    <router-link to="/contact" class='links' active-class="active-link">CONTACT</router-link>
+                    <router-link :to="{ name: 'Contact' }" class='links' active-class="active-link">CONTACT</router-link>
                   </li>
               </ul>
           </div>
