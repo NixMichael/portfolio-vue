@@ -41,8 +41,9 @@
                 </div>
             </div>
             <div class='image-container' id='green-oil' @click='showImage($event.currentTarget.id)'>
-                <img :src="require('@/assets/images/project-images/green-oil/green-oil-700px.png')" 
+                <img 
                 :srcset="require('@/assets/images/project-images/green-oil/green-oil-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/green-oil/green-oil-1200px.webp') + ' 1200w '"
+                :src="require('@/assets/images/project-images/green-oil/green-oil-700px.png')" 
                 alt='e-commerce website with PayPal integration' />
 
             </div>
@@ -68,8 +69,9 @@
                 </div>
             </div>
             <div class='image-container' id='maca' @click='showImage($event.currentTarget.id)'>
-                <img :src="require('@/assets/images/project-images/maca/maca-700px.png')" 
+                <img 
                 :srcset="require('@/assets/images/project-images/maca/maca-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/maca/maca-1200px.webp') + ' 1200w '"
+                :src="require('@/assets/images/project-images/maca/maca-700px.png')" 
                 alt='e-commerce website with PayPal integration' />
             </div>
             <div class='project-links'>
@@ -97,9 +99,10 @@
                 </div>
             </div>
             <div class='image-container' id='record-keeper' @click='showImage($event.currentTarget.id)'>
-                <img :src="require('@/assets/images/project-images/record-keeper/record-keeper-700px.png')" 
+                <img 
                 :srcset="require('@/assets/images/project-images/record-keeper/record-keeper-700px.webp') + ' 700w, ' +
                 require('@/assets/images/project-images/record-keeper/record-keeper-1200px.webp') + ' 1200w'"
+                :src="require('@/assets/images/project-images/record-keeper/record-keeper-700px.png')" 
                 alt='database built with ReactJS and Postgresql' width='100%' 
                 />
             </div>
