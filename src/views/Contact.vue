@@ -52,7 +52,7 @@ export default {
                 axiosConfig
             )
             .then(this.$router.push('success'))
-            .catch(console.log('oops'))
+            .catch(err => console.log(`Error: ${err}`))
         }
     },
     mounted () {
