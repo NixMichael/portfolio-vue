@@ -8,6 +8,7 @@
                 </p>
             </div>
             <form @submit.prevent='handleSubmit' name='web-message' method='POST' data-netlify='true' data-netlify-honeypot="bot-field">
+                <input type='hidden' name='form-name' value='web-message'/>
                 <input type='text' name='name' placeholder='Your name' v-model='form.name'/>
                 <input type='text' name='address' placeholder='Your email address' v-model='form.address'/>
                 <textarea name='message' placeholder='Type your message here...' v-model='form.message' rows='6'></textarea>
