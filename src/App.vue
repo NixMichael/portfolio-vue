@@ -255,8 +255,14 @@ body {
         width: 100%;
         height: calc(#{$contactHeight} * 2.5);
         z-index: 1;
-        background: linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
-        background: -webkit-linear-gradient(bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
+        // background: linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
+        // background: -webkit-linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
+
+        background: -webkit-gradient(linear, top, bottom, color-stop(20%,$lightmode-bg-color), color-stop(100%,rgba(255,255,255,0))); /* Chrome, Safari4+ */
+        background: -webkit-linear-gradient(bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%); /* Chrome10+, Safari5.1+ */
+        background: -moz-linear-gradient(bottom, $lightmode-bg-color 20%,rgba(255,255,255,0) 100%);    /* FF3.6+ */
+        background: linear-gradient(to bottom, $lightmode-bg-color 20%,rgba(255,255,255,0) 80%);      /* W3C */
+
     }
 
     .banner {
