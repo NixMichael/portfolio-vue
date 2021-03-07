@@ -21,7 +21,20 @@
 <script>
 export default {
     methods: {
-        handleSubmit() {
+        encode (data) {
+            return Object.keys(data)
+            .map(
+                key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+            ).join('&')
+        },
+        handleSubmit () {
+            fetch('/', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: JSON.stringify(
+                    this.encode({'form-name': 'web-message', ...this.form})
+                )
+            })
             console.log('submitted')
         }
     },
