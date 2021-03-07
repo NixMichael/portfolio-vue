@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     methods: {
         encode (data) {
@@ -28,14 +30,20 @@ export default {
             ).join('&')
         },
         handleSubmit () {
-            fetch('/', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                body: this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'})
-            })
-            .then(console.log('submitted'))
+            axios.post(
+                '/',
+                this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'}),
+                { header: 
+                    { 'Content-Type': "application/x-www-form-urlencoded" }
+                }
+            )
+            // fetch('/', {
+            //     method: 'POST',
+            //     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            //     body: this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'})
+            // })
+            .then(response => console.log(`submitted: ${response}`))
             .catch(console.log('oops'))
-            console.log(this.encode({'form-name': 'web-message', 'name': 'jim'}))
         }
     },
     mounted () {
