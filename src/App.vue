@@ -26,7 +26,7 @@
       </div>
       <div class='banner'>
           <router-link class='logo' to='/'>
-            <img id="logo" src='@/assets/graphics/LogoLight-500px.png' alt='logo' />
+            <img id='logo' src='@/assets/graphics/LogoLight-500px.png' alt='logo' />
           </router-link>
           <div class='contact-links'>
               <a target='_blank' href='mailto:mpnix@protonmail.com' class='header-link' id='email-link'></a>
@@ -38,11 +38,6 @@
 
   <div class='main'>
     <router-view/>
-    
-    <div v-if="$route.path !== '/contact' && $route.path !== '/success'" class='scrollToTop' @Click="scrollToTop()">
-      <img id='scroll-to-top' src="@/assets/graphics/scroll-to-top.png" alt="Scroll To Top">
-      <span>Back to top</span>
-    </div>
   </div>
   <Footer />
 </template>
@@ -58,18 +53,19 @@ export default {
     toggleDarkMode () {
       const logo = document.getElementById('logo')
       const toggler = document.getElementById('darkmode-toggler')
+      const scrollIcon = document.getElementById('scroll-to-top')
 
       if (document.body.clientWidth <= 750) {
-          const source = darkMode
+          const logoSource = darkMode
           ? require('@/assets/graphics/LogoDark-500px.png')
           : require('@/assets/graphics/LogoLight-500px.png')
-          logo.src = source
-          console.log(source)
+          logo.src = logoSource
       } else {
           logo.src = require('@/assets/graphics/LogoLight-500px.png')
       }
 
-      document.getElementById('scroll-to-top').src = darkMode ? '@/assets/graphics/scroll-to-top.png' : '@/assets/graphics/scroll-to-top-white.png'
+      const scrollArrow = darkMode ? require('@/assets/graphics/scroll-to-top.png') : require('@/assets/graphics/scroll-to-top-white.png')
+      scrollIcon.src = scrollArrow
 
       toggler.style.justifyContent = toggler.style.justifyContent !== 'flex-end' 
       ? 'flex-end' : 'flex-start'
@@ -94,12 +90,6 @@ export default {
       logo.src = docWidth > 750 
       ? require('./assets/graphics/LogoLight-500px.png')
       : require('./assets/graphics/LogoDark-500px.png')
-    },
-    scrollToTop () {
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-      })
     }
   },
   mounted () {
@@ -255,8 +245,6 @@ body {
         width: 100%;
         height: calc(#{$contactHeight} * 2.5);
         z-index: 1;
-        // background: linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
-        // background: -webkit-linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
 
         background: -webkit-gradient(linear, top, bottom, color-stop(20%,$lightmode-bg-color), color-stop(100%,rgba(255,255,255,0))); /* Chrome, Safari4+ */
         background: -webkit-linear-gradient(bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%); /* Chrome10+, Safari5.1+ */
@@ -557,7 +545,7 @@ body {
         flex-direction: column;
         align-items: center;
         cursor: pointer;
-        margin-bottom: 3em;
+        margin: 2em 0;
 
         img {
           width: 30px;
@@ -661,10 +649,6 @@ body {
         p {
             margin: 1em 0;
             align-self: flex-start;
-        }
-
-        &:last-child {
-            padding-bottom: 3rem;
         }
     }
 
@@ -1511,7 +1495,10 @@ body {
     }
 
     .header::before {
-        background: linear-gradient(to bottom, $darkmode-bg-color 20%, transparent 100%);
+        background: -webkit-gradient(linear, top, bottom, color-stop(20%,$darkmode-bg-color), color-stop(100%,rgba(255,255,255,0)));
+        background: -webkit-linear-gradient(bottom, $darkmode-bg-color 20%, rgba(255,255,255,0) 80%);
+        background: -moz-linear-gradient(bottom, $darkmode-bg-color 20%,rgba(255,255,255,0) 100%);
+        background: linear-gradient(to bottom, $darkmode-bg-color 20%,rgba(255,255,255,0) 80%);
     }
 
     .title-flow {
