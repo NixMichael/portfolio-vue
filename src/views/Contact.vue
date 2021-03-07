@@ -32,10 +32,11 @@ export default {
                 method: 'POST',
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 body: JSON.stringify(
-                    this.encode({'form-name': 'web-message', ...this.form})
+                    this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'})
                 )
             })
-            console.log('submitted')
+            .then(console.log('submitted'))
+            .catch(console.log('oops'))
         }
     },
     mounted () {
