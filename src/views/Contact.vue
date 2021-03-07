@@ -31,12 +31,11 @@ export default {
             fetch('/', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                body: JSON.stringify(
-                    this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'})
-                )
+                body: this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'})
             })
             .then(console.log('submitted'))
             .catch(console.log('oops'))
+            console.log(this.encode({'form-name': 'web-message', 'name': 'jim'}))
         }
     },
     mounted () {
