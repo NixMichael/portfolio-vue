@@ -39,7 +39,7 @@
   <div class='main'>
     <router-view/>
     
-    <div v-if="$route.path !== '/contact'" class='scrollToTop' @Click="scrollToTop()">
+    <div v-if="$route.path !== '/contact' && $route.path !== '/success'" class='scrollToTop' @Click="scrollToTop()">
       <img id='scroll-to-top' src="@/assets/graphics/scroll-to-top.png" alt="Scroll To Top">
       <span>Back to top</span>
     </div>
@@ -315,12 +315,6 @@ body {
 
                 &:last-child {
                     margin-right: 2em;
-                }
-
-                .contact-svgs {
-                    height: 100%;
-                    width: 1.75em;
-                    border: 2px solid red;
                 }
             }
 
@@ -598,33 +592,54 @@ body {
             padding-bottom: 3rem;
         }
     }
-        .title-flow {
-            margin: 2.5em 4em;
-            position: relative;
-            font-size: 2em;
-            margin-right: 1em;
-            background: $lightmode-bg-color;
-            padding: 0 5px;
-            &::before, &::after {
-                content: '';
-                position: absolute;
-                width: 50%;
-                height: 200%;
-                position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            &::before {
-                bottom: 25%;
-                left: -50%;
-                background-image: url('./assets/graphics/ArrowLeft.png');
-            }
-            &::after {
-                top: 50%;
-                right: -50%;
-                background-image: url('./assets/graphics/ArrowRight.png');
-            }
+
+    .title-flow {
+        margin: 2.5em 4em;
+        position: relative;
+        font-size: 2em;
+        margin-right: 1em;
+        background: $lightmode-bg-color;
+        padding: 0 5px;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 200%;
+            position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
+        &::before {
+            bottom: 25%;
+            left: -50%;
+            background-image: url('./assets/graphics/ArrowLeft.png');
+        }
+        &::after {
+            top: 50%;
+            right: -50%;
+            background-image: url('./assets/graphics/ArrowRight.png');
+        }
+    }
+
+    .success-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($darkmode-bg-color, 0.1);
+        border: 2px solid $darkmode-bg-color;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        h2 {
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 .about-container, .contact-container {
@@ -1494,6 +1509,10 @@ body {
 
     .title-flow {
         background: $darkmode-bg-color;
+    }
+
+    .success-container {
+        border: 2px solid $lightmode-bg-color;
     }
 
     .fader {
