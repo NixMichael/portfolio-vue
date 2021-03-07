@@ -256,7 +256,7 @@ body {
         height: calc(#{$contactHeight} * 2.5);
         z-index: 1;
         background: linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
-        background: -webkit-linear-gradient(to bottom, black 20%, rgba(255,255,255,0) 80%);
+        background: -webkit-linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
     }
 
     .banner {
