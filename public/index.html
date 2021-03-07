@@ -10,6 +10,14 @@
     <title>Nix Web Dev</title>
   </head>
   <body id='body'>
+
+    <form name="web-message" netlify netlify-honeypot="bot-field" hidden>
+      <input type='text' name='name'/>
+      <input type='text' name='address'/>
+      <textarea name='message'></textarea>
+      <button type='submit'>Send</button>
+    </form>
+
     <noscript>
       <strong>We're sorry but Nix Web Dev doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
