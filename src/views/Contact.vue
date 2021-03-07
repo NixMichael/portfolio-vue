@@ -8,9 +8,9 @@
                 </p>
             </div>
             <form @submit.prevent='handleSubmit' name='web-message' method='POST' data-netlify='true' data-netlify-honeypot="bot-field">
-                <input type='text' name='name' placeholder='Your name'/>
-                <input type='text' name='address' placeholder='Your email address'/>
-                <textarea name='message' placeholder='Type your message here...' rows='6'></textarea>
+                <input type='text' name='name' placeholder='Your name' v-model='form.name'/>
+                <input type='text' name='address' placeholder='Your email address' v-model='form.address'/>
+                <textarea name='message' placeholder='Type your message here...' v-model='form.message' rows='6'></textarea>
                 <button type='submit'>Send</button>
             </form>
         </div>
@@ -21,6 +21,15 @@
 import axios from 'axios'
 
 export default {
+    data () {
+        return {
+            form: {
+                name: '',
+                address: '',
+                message: ''
+            }
+        }
+    },
     methods: {
         encode (data) {
         return Object.keys(data)
