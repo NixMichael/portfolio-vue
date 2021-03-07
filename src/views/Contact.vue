@@ -43,7 +43,7 @@ export default {
             const axiosConfig = {
                 header: { "Content-Type": "application/x-www-form-urlencoded" }
             }
-            axios.post(
+            await axios.post(
                 "/",
                 this.encode({
                 "form-name": "web-message",
@@ -51,7 +51,7 @@ export default {
                 }),
                 axiosConfig
             )
-            .then(response => console.log(`submitted: ${response}`))
+            .then(this.$router.push('success'))
             .catch(console.log('oops'))
         }
     },
