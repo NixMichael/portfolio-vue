@@ -7,7 +7,7 @@
                     Got a question or interested in collaborating? I'd love to hear from you!
                 </p>
             </div>
-            <form @submit.prevent='handleSubmit' name='web-message' method='POST' data-netlify='true' data-netlify-honeypot="bot-field" action='/success'>
+            <form @submit.prevent='handleSubmit' name='web-message' method='POST' data-netlify='true' data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="web-message" />
                 <input type='text' name='name' placeholder='Your name'/>
                 <input type='text' name='address' placeholder='Your email address'/>
@@ -24,24 +24,24 @@ import axios from 'axios'
 export default {
     methods: {
         encode (data) {
-            return Object.keys(data)
+        return Object.keys(data)
             .map(
-                key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-            ).join('&')
+            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+            )
+            .join("&");
         },
         handleSubmit () {
+            const axiosConfig = {
+                header: { "Content-Type": "application/x-www-form-urlencoded" }
+            }
             axios.post(
-                '/',
-                this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'}),
-                { header: 
-                    { 'Content-Type': "application/x-www-form-urlencoded" }
-                }
+                "/",
+                this.encode({
+                "form-name": "web-message",
+                ...this.form
+                }),
+                axiosConfig
             )
-            // fetch('/', {
-            //     method: 'POST',
-            //     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            //     body: this.encode({'form-name': 'web-message', 'name': 'Harry', 'address': 'harry@encode.com', 'message': 'long message'})
-            // })
             .then(response => console.log(`submitted: ${response}`))
             .catch(console.log('oops'))
         }
