@@ -69,7 +69,7 @@ export default {
           logo.src = require('@/assets/graphics/LogoLight-500px.png')
       }
 
-      document.getElementById('scroll-to-top').src = darkMode ? require('@/assets/graphics/scroll-to-top.png') : require('@/assets/graphics/scroll-to-top-white.png')
+      document.getElementById('scroll-to-top').src = darkMode ? '@/assets/graphics/scroll-to-top.png' : '@/assets/graphics/scroll-to-top-white.png'
 
       toggler.style.justifyContent = toggler.style.justifyContent !== 'flex-end' 
       ? 'flex-end' : 'flex-start'
@@ -255,8 +255,8 @@ body {
         width: 100%;
         height: calc(#{$contactHeight} * 2.5);
         z-index: 1;
-        background-image: linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
-        background-image: -webkit-linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
+        background: linear-gradient(to bottom, $lightmode-bg-color 20%, rgba(255,255,255,0) 80%);
+        background: -webkit-linear-gradient(to bottom, black 20%, rgba(255,255,255,0) 80%);
     }
 
     .banner {
@@ -1362,7 +1362,7 @@ body {
     }
 
     .main::before {
-        background-image: linear-gradient(to bottom, $lightmode-bg-color 55%, transparent 100%);
+        background: linear-gradient(to bottom, $lightmode-bg-color 55%, transparent 100%);
     }
 
     .header {
@@ -1505,7 +1505,7 @@ body {
     }
 
     .header::before {
-        background-image: linear-gradient(to bottom, $darkmode-bg-color 20%, transparent 100%);
+        background: linear-gradient(to bottom, $darkmode-bg-color 20%, transparent 100%);
     }
 
     .title-flow {
