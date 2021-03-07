@@ -42,11 +42,10 @@
                 </div>
             </div>
             <div class='image-container' id='green-oil' @click='showImage($event.currentTarget.id)'>
-                <img src='@/assets/images/project-images/green-oil/green-oil-700px.png'>
-                <!-- <img src='@/assets/images/project-images/green-oil/green-oil-700px.png'
-                srcset="@/assets/images/project-images/green-oil/green-oil-700px.webp 700w,
-                @/assets/images/project-images/green-oil/green-oil-1200px.webp 1200w"
-                alt='e-commerce website with PayPal integration' /> -->
+                <img :src="require('@/assets/images/project-images/green-oil/green-oil-700px.png')" 
+                :srcset="require('@/assets/images/project-images/green-oil/green-oil-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/green-oil/green-oil-1200px.webp') + ' 1200w '"
+                alt='e-commerce website with PayPal integration' />
+
             </div>
             <div class='project-links'>
                 <a target='_blank' href="https://github.com/c0llid3r/green-oil">VIEW CODE</a>
@@ -70,11 +69,9 @@
                 </div>
             </div>
             <div class='image-container' id='maca' @click='showImage($event.currentTarget.id)'>
-                <img src='@/assets/images/project-images/maca/maca-700px.png' >
-                <!-- <img src='@/assets/images/project-images/maca/maca-700px.png' width="100%"
-                srcset="@/assets/images/project-images/maca/maca-700px.webp 700w, 
-                @/assets/images/project-images/maca/maca-1200px.webp 1200w"
-                alt='e-commerce website with PayPal integration' /> -->
+                <img :src="require('@/assets/images/project-images/maca/maca-700px.png')" 
+                :srcset="require('@/assets/images/project-images/maca/maca-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/maca/maca-1200px.webp') + ' 1200w '"
+                alt='e-commerce website with PayPal integration' />
             </div>
             <div class='project-links'>
                 <a target='_blank' href="https://github.com/c0llid3r/maca-wp-theme">VIEW CODE</a>
@@ -101,12 +98,11 @@
                 </div>
             </div>
             <div class='image-container' id='record-keeper' @click='showImage($event.currentTarget.id)'>
-                <img src='@/assets/images/project-images/record-keeper/record-keeper-700px.png' >
-                <!-- <img src='@/assets/images/project-images/record-keeper/record-keeper-700px.png' 
-                srcset="@/assets/images/project-images/record-keeper/record-keeper-700px.webp 700w,
-                @/assets/images/project-images/record-keeper/record-keeper-1200px.webp 1200w"
+                <img :src="require('@/assets/images/project-images/record-keeper/record-keeper-700px.png')" 
+                :srcset="require('@/assets/images/project-images/record-keeper/record-keeper-700px.webp') + ' 700w, ' +
+                require('@/assets/images/project-images/record-keeper/record-keeper-1200px.webp') + ' 1200w'"
                 alt='database built with ReactJS and Postgresql' width='100%' 
-                /> -->
+                />
             </div>
             <div class='project-links'>
                 <a target='_blank' href="https://github.com/c0llid3r/recordkeeper">VIEW CODE</a>
@@ -157,6 +153,9 @@ export default {
     mounted () {
         window.scrollTo(0,0)
         this.fadeProjects()
+        setTimeout(() => {
+            document.querySelector('.menu-toggler').checked = false
+        }, 50)
     }
 }
 </script>

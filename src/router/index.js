@@ -25,7 +25,7 @@ const routes = [
     component: Contact
   },
   {
-    path: '/thankyou',
+    path: '/success',
     name: 'ThankYou',
     component: ThankYou
   }
