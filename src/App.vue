@@ -65,7 +65,10 @@ export default {
       }
 
       const scrollArrow = darkMode ? require('@/assets/graphics/scroll-to-top.png') : require('@/assets/graphics/scroll-to-top-white.png')
-      scrollIcon.src = scrollArrow
+
+      if (scrollIcon) {
+        scrollIcon.src = scrollArrow
+      }
 
       toggler.style.justifyContent = toggler.style.justifyContent !== 'flex-end' 
       ? 'flex-end' : 'flex-start'
