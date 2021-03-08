@@ -111,10 +111,6 @@
                 <a target='_blank' href="https://distracted-liskov-55fae3.netlify.app">VIEW LIVE</a>
             </div>
         </div>
-        <div class='scrollToTop' @Click="scrollToTop()">
-            <img id='scroll-to-top' src="@/assets/graphics/scroll-to-top.png" alt='Scroll To Top'>
-            <span>Back to top</span>
-        </div>
     </div>
 </template>
 

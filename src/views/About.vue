@@ -39,10 +39,6 @@
             <p>I enjoy using Illustrator or Inkscape to create vector graphics for logos and icons, although I feel most comfortable in Photoshop, not surprisingly due to my extensive background in photography.</p>
             <p><br>To see some examples of my work take a look at the <router-link :to="{ name: 'Projects' }" class='inline-link'>Projects</router-link> page and please get in touch if you'd like to collaborate or find out more.</p>
         </div>
-        <div class='scrollToTop' @Click="scrollToTop()">
-            <img id='scroll-to-top' src="@/assets/graphics/scroll-to-top.png" alt='Scroll To Top'>
-            <span>Back to top</span>
-        </div>
     </div>
 </template>
 
