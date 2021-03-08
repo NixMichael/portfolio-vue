@@ -35,7 +35,7 @@
             <p>My move back into web development began by improving my JavaScript skills. Once I felt confident with my abilities I moved on to React which really opened my eyes to the possibilities of modern web development. From there I learnt to build similar products using Vue, and soon after delved back into PHP and began experimenting with Laravel. The learning never ends and <a target="_blank" href="https://c0llid3r.github.io/snake"><span class='inline-link' id='snake'>never gets dull</span></a>.</p>
             <h3 id="design-skills"><br><br><br>Design Skills</h3>
             <p>Having trained and worked as a photographer and videographer, I also have extensive experience using creative editing software. I have been using Adobe products for over fifteen years, including Photoshop, Illustrator and Premiere Pro. I also have experience with similar software including Inkscape and GIMP.</p>
-            <img src='@/assets/graphics/adobe-logos.png' alt='design software experience' height='80px'>
+            <img style='width: 40%; max-width: 400px' src='@/assets/graphics/adobe-logos.png' alt='design software experience'>
             <p>I enjoy using Illustrator or Inkscape to create vector graphics for logos and icons, although I feel most comfortable in Photoshop, not surprisingly due to my extensive background in photography.</p>
             <p><br>To see some examples of my work take a look at the <router-link :to="{ name: 'Projects' }" class='inline-link'>Projects</router-link> page and please get in touch if you'd like to collaborate or find out more.</p>
         </div>
