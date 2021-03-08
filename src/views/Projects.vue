@@ -33,10 +33,10 @@
                     </p>
                     <p>
                         I visited Green Oil's website whilst looking for eco friendly oil for maintaining my bike. 
-                        I saw it was in need of a redesign and realised it was a great project to take on to learn more about online payment integration.
+                        I saw it was in need of a redesign and decided it would make for an interesting VueJS project.
                     </p>
                     <p>
-                        This project gave me a great insight into integrating payment methods, using PayPal on this occasion. I also added the option to toggle between Pounds Sterling and Euros currencies.
+                        Building this website gave me great insight into integrating payment methods, using PayPal on this occasion. I also added the option to toggle between Pounds Sterling and Euros currencies.
                     </p>
                 </div>
             </div>
@@ -85,16 +85,16 @@
                 <h3>Medical Illustration Database</h3>
                 <div class='description' data-simplebar data-simplebar-auto-hide="false">
                     <p>
-                        Full stack database solution built using ReactJS, NodeJS and Postgresql.
+                        Full stack database solution built using ReactJS, NodeJS and PostgreSQL.
                     </p>
                     <p>
-                        This was built to replace an old MS Access database which had been in use since the mid 90s.
+                        This was built as a potential upgrade to an old MS Access database which had been in use since the mid 90s.
                     </p>
                     <p>
                         Probably my most complex project to date, but also the most enjoyable as I was able to really get to grips with the full capabilities of React.
                     </p>
                     <p>
-                        I initially took a class based approach to building the app, but having learnt how to use React Hooks and Redux I rebuilt the app. This was a great learning experience, reviewing my original code and discovering where it could be improved to improve the functionality and reliability of the app.
+                        I initially took a class based approach to building the app, but having learned how to use React Hooks and Redux I rebuilt the app. This was a great learning experience, reviewing my original code and discovering where it could be improved to improve the functionality and reliability of the app.
                     </p>
                 </div>
             </div>
