@@ -55,33 +55,6 @@
 
         <div class='fader'>
             <div class='project-description'>
-                <h3>MACA</h3>
-                <div class='description' data-simplebar data-simplebar-auto-hide="false">
-                    <p>
-                        Website for vegan animal activism group 'Manchester Animal Climate Action'.
-                    </p>
-                    <p>
-                        Manchester Animal Action were in the process of rebranding to Manchester Animal Climate Action. They were also in need of a website overhaul as their original site has various design issues.
-                    </p>
-                    <p>
-                        As the site needs to be easily updated by MACA volunteers, I chose to build it using Wordpress. I created a custom theme so that I could design the site from scratch.
-                    </p>
-                </div>
-            </div>
-            <div class='image-container' id='maca' @click='showImage($event.currentTarget.id)'>
-                <img 
-                :srcset="require('@/assets/images/project-images/maca/maca-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/maca/maca-1200px.webp') + ' 1200w '"
-                :src="require('@/assets/images/project-images/maca/maca-700px.png')" 
-                alt='e-commerce website with PayPal integration' />
-            </div>
-            <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/maca-wp-theme">VIEW CODE</a>
-                <a target='_blank' href="http://35.177.13.244/">VIEW LIVE</a>
-            </div>
-        </div>
-
-        <div class='fader'>
-            <div class='project-description'>
                 <h3>Medical Illustration Database</h3>
                 <div class='description' data-simplebar data-simplebar-auto-hide="false">
                     <p>
@@ -107,10 +80,39 @@
                 />
             </div>
             <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper">VIEW CODE</a>
+                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper">FRONT END CODE</a>
+                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper-api">BACK END CODE</a>
                 <a target='_blank' href="https://distracted-liskov-55fae3.netlify.app">VIEW LIVE</a>
             </div>
         </div>
+
+        <div class='fader'>
+            <div class='project-description'>
+                <h3>MACA</h3>
+                <div class='description' data-simplebar data-simplebar-auto-hide="false">
+                    <p>
+                        Website for vegan animal activism group 'Manchester Animal Climate Action'.
+                    </p>
+                    <p>
+                        Manchester Animal Action were in the process of rebranding to Manchester Animal Climate Action. They were also in need of a website overhaul as their original site has various design issues.
+                    </p>
+                    <p>
+                        As the site needs to be easily updated by MACA volunteers, I chose to build it using Wordpress. I created a custom theme so that I could design the site from scratch.
+                    </p>
+                </div>
+            </div>
+            <div class='image-container' id='maca' @click='showImage($event.currentTarget.id)'>
+                <img 
+                :srcset="require('@/assets/images/project-images/maca/maca-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/maca/maca-1200px.webp') + ' 1200w '"
+                :src="require('@/assets/images/project-images/maca/maca-700px.png')" 
+                alt='e-commerce website with PayPal integration' />
+            </div>
+            <div class='project-links'>
+                <a target='_blank' href="https://github.com/c0llid3r/maca-wp-theme">VIEW CODE</a>
+                <a target='_blank' href="http://35.177.13.244/">VIEW LIVE</a>
+            </div>
+        </div>
+
     </div>
 </template>
 
