@@ -16,7 +16,7 @@
             <p>Throughout my clinical photography career my interest in web development continued. Over the years I built websites for colleagues and a number of portfolio sites for my photography.</p>
             <p>In 2019, having spent over ten years as a clinical photographer, I found myself being drawn back to web development with even more enthusiasm than before.</p>
             <h3 id="coding-skills"><br><br><br>Coding Skills</h3>
-            <p>My experience lies in the following:</p>
+            <p>I am experienced in the following:</p>
             <br><br>
                 <ul>
                     <li>HTML and CSS/SCSS</li>
@@ -32,7 +32,7 @@
                     <li>Git and GitHub for version control</li>
                 </ul>
 
-            <p>My move back into web development began by improving my JavaScript skills. Once I felt confident with my abilities I moved on to React which really opened my eyes to the possibilities of modern web development. From there I learnt to build similar products using Vue, and soon after delved back into PHP and began experimenting with Laravel. The learning never ends and <a target="_blank" href="https://c0llid3r.github.io/snake"><span class='inline-link' id='snake'>never gets dull</span></a>.</p>
+            <p>I began my transition back into web development by first of all focusing on my JavaScript skills. Once I felt confident with my abilities I moved on to React which really opened my eyes to the possibilities of modern web development. From there I learnt to build similar products using Vue, and soon after delved back into PHP and began experimenting with Laravel. The learning never ends and <a target="_blank" href="https://c0llid3r.github.io/snake"><span class='inline-link' id='snake'>never gets dull</span></a>.</p>
             <h3 id="design-skills"><br><br><br>Design Skills</h3>
             <p>Having trained and worked as a photographer and videographer, I also have extensive experience using creative editing software. I have been using Adobe products for over fifteen years, including Photoshop, Illustrator and Premiere Pro. I also have experience with similar software including Inkscape and GIMP.</p>
             <img style='width: 40%; max-width: 400px' src='@/assets/graphics/adobe-logos.png' alt='design software experience'>
