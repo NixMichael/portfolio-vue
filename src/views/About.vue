@@ -21,6 +21,7 @@
                 <ul>
                     <li>HTML and CSS/SCSS</li>
                     <li>JavaScript (including ES6)</li>
+                    <li>jQuery</li>
                     <li>PHP</li>
                     <li>Laravel</li>
                     <li>ReactJS + Redux</li>

@@ -64,10 +64,10 @@
                         This was built as a potential upgrade to an old MS Access database which had been in use since the mid 90s.
                     </p>
                     <p>
-                        Probably my most complex project to date, but also the most enjoyable as I was able to really get to grips with the full capabilities of React.
+                        I initially took a class based approach to building the app, but having learned how to use React Hooks and Redux I rebuilt the app to take advantage of this new approach. This was a great learning experience, reviewing my original code and discovering where it could be changed to improve the functionality and reliability of the app.
                     </p>
                     <p>
-                        I initially took a class based approach to building the app, but having learned how to use React Hooks and Redux I rebuilt the app. This was a great learning experience, reviewing my original code and discovering where it could be improved to improve the functionality and reliability of the app.
+                        My most complex project to date, but also the most enjoyable as I was able to really get to grips with the full capabilities of React.
                     </p>
                 </div>
             </div>
