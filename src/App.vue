@@ -68,11 +68,7 @@ export default {
             logo.src = require('@/assets/graphics/LogoLight-500px.png')
         }
 
-        const scrollArrow = darkMode ? require('@/assets/graphics/scroll-to-top.png') : require('@/assets/graphics/scroll-to-top-white.png')
-
-        // if (scrollIcon) {
-            scrollIcon.src = scrollArrow
-        // }
+        scrollIcon.src = darkMode ? require('@/assets/graphics/scroll-to-top.png') : require('@/assets/graphics/scroll-to-top-white.png')
 
         toggler.style.justifyContent = toggler.style.justifyContent !== 'flex-end' 
         ? 'flex-end' : 'flex-start'
@@ -97,6 +93,12 @@ export default {
       logo.src = docWidth > 750 
       ? require('./assets/graphics/LogoLight-500px.png')
       : require('./assets/graphics/LogoDark-500px.png')
+    },
+    scrollToTop () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
     }
   },
   mounted () {
@@ -134,7 +136,7 @@ html, body {
 }
 
 html {
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
 }
 
 body {

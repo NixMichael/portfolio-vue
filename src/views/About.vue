@@ -16,7 +16,7 @@
             <p>Throughout my clinical photography career my interest in web development continued. Over the years I built websites for colleagues and a number of portfolio sites for my photography.</p>
             <p>In 2019, having spent over ten years as a clinical photographer, I found myself being drawn back to web development with even more enthusiasm than before.</p>
             <h3 id="coding-skills"><br><br><br>Coding Skills</h3>
-            <p>I am experienced in the following:</p>
+            <p>I have experience in the following:</p>
             <br><br>
                 <ul>
                     <li>HTML and CSS/SCSS</li>
@@ -47,17 +47,6 @@
 export default {
   mounted () {
     window.scrollTo(0,0)
-    setTimeout(() => {
-        document.querySelector('.menu-toggler').checked = false
-    }, 50)
-  },
-  methods: {
-    scrollToTop () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }
   }
 }
 </script>

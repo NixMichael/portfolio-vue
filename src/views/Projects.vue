@@ -152,20 +152,11 @@ export default {
             faders.forEach(fader => {
                 observer.observe(fader)
             })
-        },
-        scrollToTop () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
         }
     },
     mounted () {
         window.scrollTo(0,0)
         this.fadeProjects()
-        setTimeout(() => {
-            document.querySelector('.menu-toggler').checked = false
-        }, 50)
     }
 }
 </script>
