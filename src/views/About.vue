@@ -47,6 +47,9 @@
 export default {
   mounted () {
     window.scrollTo(0,0)
+    setTimeout(() => {
+        document.querySelector('.menu-toggler').checked = false
+    }, 50)
   }
 }
 </script>
