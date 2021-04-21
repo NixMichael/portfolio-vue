@@ -160,6 +160,14 @@ export default {
             document.querySelector('.menu-toggler').checked = false
         }, 50)
         this.fadeProjects()
+
+        const description = document.querySelectorAll('.description')
+
+        document.querySelectorAll('.project-description').forEach((el, i) => {
+            el.addEventListener('mouseleave', () => {
+                description[i].scrollTop = 0
+            })
+        })
     }
 }
 </script>

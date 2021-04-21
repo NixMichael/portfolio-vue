@@ -20,7 +20,7 @@
             <br><br>
                 <ul>
                     <li>HTML and CSS/SCSS</li>
-                    <li>JavaScript (including ES6)</li>
+                    <li>JavaScript (including ES6+)</li>
                     <li>jQuery</li>
                     <li>PHP</li>
                     <li>Laravel</li>
