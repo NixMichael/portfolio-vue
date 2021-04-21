@@ -103,6 +103,12 @@ export default {
   },
   mounted () {
     this.setLogo()
+
+    const scroller = document.querySelector('.scrollToTop')
+
+    document.addEventListener('scroll', () => {
+        window.scrollY > 300 ? scroller.style.opacity = 1 : scroller.style.opacity = 0
+    })
   }
 }
 </script>
@@ -133,10 +139,6 @@ $fader-bg-color: rgb(236, 236, 236);
 
 html, body {
     overflow-x: hidden;
-}
-
-html {
-    // scroll-behavior: smooth;
 }
 
 body {
@@ -551,13 +553,28 @@ body {
 
     .scrollToTop {
         display: none;
+        opacity: 0;
+        position: fixed;
+        bottom: 0;
+        left: calc(50vw + #{$menu-width});
+        left: 55vw;
+        transform: translateX(-50%);
         flex-direction: column;
         align-items: center;
         cursor: pointer;
         margin: 2em 0;
+        transition: opacity 400ms ease;
 
         img {
           width: 30px;
+          opacity: 0.4;
+        }
+
+        span {
+            color: rgba(0,0,0,0.6);
+            padding: 0.5rem 1rem;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.4);
+            border-radius: 10px;
         }
     }
 
@@ -1566,6 +1583,11 @@ body {
         color: white;
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0 2px 8px 1px rgba(255, 255, 255, 0.3);
+    }
+
+    .scrollToTop span {
+        color: rgba(255,255,255,0.6);
+        box-shadow: 0 0 0 4px rgba(255,255,255,0.4);
     }
 
     .footer {
