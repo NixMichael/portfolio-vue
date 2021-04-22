@@ -39,8 +39,8 @@
   <div class='main'>
     <router-view/>
     <div class='scrollToTop' :class="this.$route.name === 'Projects' || this.$route.name === 'About' ? 'scroll' : ''" @Click="scrollToTop()">
+        <span>Top</span>
         <img id='scroll-to-top' src="@/assets/graphics/scroll-to-top.png" alt='Scroll To Top'>
-        <span>Back to top</span>
     </div>
   </div>
   <Footer />
@@ -245,7 +245,7 @@ body {
     left: 0;
     width: 100vw;
     height: calc(#{$burger-dimensions} * 2.5);
-    z-index: 10;
+    z-index: 9;
 
     //Fading gradient using pseudo element
     &::before {
@@ -556,8 +556,7 @@ body {
         opacity: 0;
         position: fixed;
         bottom: 0;
-        left: calc(50vw + #{$menu-width});
-        left: 55vw;
+        left: calc(50vw + (#{$menu-width}) / 2);
         transform: translateX(-50%);
         flex-direction: column;
         align-items: center;
@@ -566,15 +565,31 @@ body {
         transition: opacity 400ms ease;
 
         img {
-          width: 30px;
-          opacity: 0.4;
+            position: absolute;
+            bottom: 101%;
+            width: 30px;
+            opacity: 0.6;
+            transition: opacity 300ms ease;
         }
 
         span {
             color: rgba(0,0,0,0.6);
             padding: 0.5rem 1rem;
-            box-shadow: 0 0 0 3px rgba(0,0,0,0.4);
+            box-shadow: 0 0 0 4px rgba($darkmode-bg-color, 0.6);
             border-radius: 10px;
+            background-color: rgba($lightmode-bg-color, 0.6);
+            transition: background-color 300ms ease, box-shadow 300ms ease;
+            text-align: center;
+
+            &:hover {
+                background-color: rgba($highlightFont, 0.9);
+                box-shadow: 0 0 0 4px rgba($darkmode-bg-color, 0.8);
+
+                & ~ img {
+                    opacity: 0.8;
+                }
+            }
+
         }
     }
 
@@ -1033,7 +1048,7 @@ body {
     clip-path: polygon(4em 0, 100% 0, 100% 100%, 0 100%);
     transition: right 400ms ease-in-out, clip-path 400ms ease-in-out;
     outline: 1px solid $fader-bg-color;
-    z-index: 10;
+    z-index: 9;
 
     &::before {
         content: '';
@@ -1118,6 +1133,7 @@ body {
     }
 
     .header {
+        z-index: 20;
 
         .banner {
             top: 0;
@@ -1157,6 +1173,21 @@ body {
         &::before {
             display: none;
             width: 100%;
+        }
+
+
+        .scrollToTop {
+            bottom: -0.5rem;
+            left: calc(100vw - 65px);
+            z-index: 10;
+            span {
+                color: white;
+                box-shadow: 0 0 0 4px rgba($lightmode-bg-color, 0.9);
+                background-color: rgba(0,0,0,0.4);
+                &:hover {
+                    box-shadow: 0 0 0 4px rgba($lightmode-bg-color, 0.9);
+                }
+            }
         }
 
         .container {
@@ -1319,10 +1350,10 @@ body {
 
     .footer {
         position: relative;
-        margin: 2rem auto 0;
+        margin: 1rem auto 0;
         padding: 3em 0;
         color: white;
-        background: $darkmode-bg-color;
+        background: $darkmode-menu-color;
         flex-direction: column;
         right: 0;
         width: 100vw;
@@ -1585,9 +1616,23 @@ body {
         box-shadow: 0 2px 8px 1px rgba(255, 255, 255, 0.3);
     }
 
-    .scrollToTop span {
-        color: rgba(255,255,255,0.6);
-        box-shadow: 0 0 0 4px rgba(255,255,255,0.4);
+    .scrollToTop {
+        img {
+            opacity: 0.7;
+        }
+        span {
+            color: rgba(255,255,255,0.8);
+            background-color: rgba($darkmode-bg-color, 0.4);
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.7);
+
+            &:hover {
+                box-shadow: 0 0 0 4px rgba(255,255,255,0.9);
+
+                & ~ img {
+                    opacity: 0.9;
+                }
+            }
+        }
     }
 
     .footer {
