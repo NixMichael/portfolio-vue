@@ -33,7 +33,7 @@
                     <li>Git and GitHub for version control</li>
                 </ul>
 
-            <p>I began my transition back into web development by first of all focusing on my JavaScript skills. Once I felt confident with my abilities I moved on to React which really opened my eyes to the possibilities of modern web development. From there I learnt to build similar products using Vue, and soon after delved back into PHP and began experimenting with Laravel. The learning never ends and <a target="_blank" href="https://c0llid3r.github.io/snake"><span class='inline-link' id='snake'>never gets dull</span></a>.</p>
+            <p>I began my transition back into web development by first of all focusing on my JavaScript skills. Once I felt confident with my abilities I moved on to React which really opened my eyes to the possibilities of modern web development. From there I learnt to build similar products using Vue, and soon after delved back into PHP and began experimenting with Laravel. The learning never ends and never gets dull.</p>
             <h3 id="design-skills"><br><br><br>Design Skills</h3>
             <p>Having trained and worked as a photographer and videographer, I also have extensive experience using creative editing software. I have been using Adobe products for over fifteen years, including Photoshop, Illustrator and Premiere Pro. I also have experience with similar software including Inkscape and GIMP.</p>
             <img style='width: 40%; max-width: 400px' src='@/assets/graphics/adobe-logos.png' alt='design software experience'>
