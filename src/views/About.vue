@@ -27,7 +27,6 @@
                     <li>ReactJS + Redux</li>
                     <li>VueJS + Vuex</li>
                     <li>NodeJS</li>
-                    <li>Webpack</li>
                     <li>Using and building APIs</li>
                     <li>Relational databases including MySQL and PostgreSQL</li>
                     <li>Package managers including NPM and Composer</li>
