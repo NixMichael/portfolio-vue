@@ -43,7 +43,7 @@
                 <img 
                 :srcset="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/gp-assistant/gp-assistant-1200px.webp') + ' 1200w '"
                 :src="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.png')" 
-                alt='e-commerce website with PayPal integration' />
+                alt='GP appointment booking and messaging system' />
 
             </div>
             <div class='project-links'>
@@ -111,6 +111,34 @@
                 <a target='_blank' href="https://github.com/c0llid3r/recordkeeper">VIEW CODE (FE)</a>
                 <a target='_blank' href="https://github.com/c0llid3r/recordkeeper-api">VIEW CODE (BE)</a>
                 <a target='_blank' href="https://distracted-liskov-55fae3.netlify.app">VIEW LIVE</a>
+            </div>
+        </div>
+
+        <div class='fader'>
+            <div class='project-description'>
+                <h3>Green Oil</h3>
+                <div class='description' data-simplebar data-simplebar-auto-hide="false">
+                    <p>
+                        Website for vegan animal activism group 'Manchester Animal Climate Action'.
+                    </p>
+                    <p>
+                        Manchester Animal Action were in the process of rebranding to Manchester Animal Climate Action. They were also in need of a website overhaul as their original site has various design issues.
+                    </p>
+                    <p>
+                        As the site needs to be easily updated by MACA volunteers, I chose to build it using Wordpress. I created a custom theme so that I could design the site from scratch.
+                    </p>
+                </div>
+            </div>
+            <div class='image-container' id='maca' @click='showImage($event.currentTarget.id)'>
+                <img 
+                :srcset="require('@/assets/images/project-images/maca/maca-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/maca/maca-1200px.webp') + ' 1200w '"
+                :src="require('@/assets/images/project-images/maca/maca-700px.png')" 
+                alt='Website for Manchester Animal Climate Action' />
+
+            </div>
+            <div class='project-links'>
+                <a target='_blank' href="https://github.com/c0llid3r/maca-website">VIEW CODE</a>
+                <a target='_blank' href="https://c0llid3r.github.io/maca-website/latestnews">VIEW LIVE</a>
             </div>
         </div>
     </div>
