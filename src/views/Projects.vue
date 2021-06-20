@@ -26,6 +26,62 @@
 
         <div class='fader'>
             <div class='project-description'>
+                <h3>GP Assistant</h3>
+                <div class='description' data-simplebar data-simplebar-auto-hide="false">
+                    <p>
+                        GP appointment and messaging solution built with PHP, Javascript and jQuery.
+                    </p>
+                    <p>
+                        This website uses PDO to connect to a MySQL database in order to fetch, update and store user login details as well as their appointment bookings and correspondence with their GP.
+                    </p>
+                </div>
+            </div>
+            <div class='image-container' id='gp-assistant' @click='showImage($event.currentTarget.id)'>
+                <img 
+                :srcset="require('@/assets/images/project-images/record-keeper/record-keeper-700px.webp') + ' 700w, ' +
+                require('@/assets/images/project-images/record-keeper/record-keeper-1200px.webp') + ' 1200w'"
+                :src="require('@/assets/images/project-images/record-keeper/record-keeper-700px.png')" 
+                alt='database built with ReactJS and Postgresql' width='100%' 
+                />
+            </div>
+            <div class='project-links'>
+                <a target='_blank' href="https://github.com/c0llid3r/gpassistant">VIEW CODE</a>
+                <a target='_blank' href="serene-hollows-39973.herokuapp.com/">VIEW LIVE</a>
+            </div>
+        </div>
+
+        <div class='fader'>
+            <div class='project-description'>
+                <h3>GP Assistant</h3>
+                <div class='description' data-simplebar data-simplebar-auto-hide="false">
+                    <p>
+                        Custom built e-commerce website based on a sustainable bicycle oil company, using a PayPal payment API.
+                    </p>
+                    <p>
+                        I visited Green Oil's website whilst looking for eco friendly oil for maintaining my bike. 
+                        I saw it was in need of a redesign and decided it would make for an interesting VueJS project.
+                    </p>
+                    <p>
+                        Building this website gave me great insight into integrating payment methods, using PayPal on this occasion. I also added the option to toggle between Pounds Sterling and Euros currencies.
+                    </p>
+                </div>
+            </div>
+            <div class='image-container' id='gp-assistant' @click='showImage($event.currentTarget.id)'>
+                <img 
+                :srcset="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.webp') + ' 700w, '
+                 + require('@/assets/images/project-images/gp-assistant/gp-assistant-1200px.webp') + ' 1200w '"
+                :src="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.png')" 
+                alt='e-commerce website with PayPal integration' />
+
+            </div>
+            <div class='project-links'>
+                <a target='_blank' href="https://github.com/c0llid3r/gpassistant">VIEW CODE</a>
+                <a target='_blank' href="https://serene-hollows-39973.herokuapp.com/">VIEW LIVE</a>
+            </div>
+        </div>
+
+        <div class='fader'>
+            <div class='project-description'>
                 <h3>Green Oil</h3>
                 <div class='description' data-simplebar data-simplebar-auto-hide="false">
                     <p>
@@ -80,8 +136,8 @@
                 />
             </div>
             <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper">FRONT END CODE</a>
-                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper-api">BACK END CODE</a>
+                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper">VIEW CODE (FE)</a>
+                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper-api">VIEW CODE (BE)</a>
                 <a target='_blank' href="https://distracted-liskov-55fae3.netlify.app">VIEW LIVE</a>
             </div>
         </div>
