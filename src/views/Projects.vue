@@ -116,7 +116,7 @@
 
         <div class='fader'>
             <div class='project-description'>
-                <h3>Green Oil</h3>
+                <h3>MACA</h3>
                 <div class='description' data-simplebar data-simplebar-auto-hide="false">
                     <p>
                         Website for vegan animal activism group 'Manchester Animal Climate Action'.
