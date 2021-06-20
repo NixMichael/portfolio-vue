@@ -29,47 +29,19 @@
                 <h3>GP Assistant</h3>
                 <div class='description' data-simplebar data-simplebar-auto-hide="false">
                     <p>
-                        GP appointment and messaging solution built with PHP, Javascript and jQuery.
+                        GP appointments and messaging system, built using OOP PHP.
                     </p>
                     <p>
-                        This website uses PDO to connect to a MySQL database in order to fetch, update and store user login details as well as their appointment bookings and correspondence with their GP.
+                        Based on an existing GP system, I wanted to create a similar system but with a better user experience.
+                    </p>
+                    <p>
+                        Patients are able to log in to the system to book and cancel appointments, as well have discussions with their GP without having to attend the surgery.
                     </p>
                 </div>
             </div>
             <div class='image-container' id='gp-assistant' @click='showImage($event.currentTarget.id)'>
                 <img 
-                :srcset="require('@/assets/images/project-images/record-keeper/record-keeper-700px.webp') + ' 700w, ' +
-                require('@/assets/images/project-images/record-keeper/record-keeper-1200px.webp') + ' 1200w'"
-                :src="require('@/assets/images/project-images/record-keeper/record-keeper-700px.png')" 
-                alt='database built with ReactJS and Postgresql' width='100%' 
-                />
-            </div>
-            <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/gpassistant">VIEW CODE</a>
-                <a target='_blank' href="serene-hollows-39973.herokuapp.com/">VIEW LIVE</a>
-            </div>
-        </div>
-
-        <div class='fader'>
-            <div class='project-description'>
-                <h3>GP Assistant</h3>
-                <div class='description' data-simplebar data-simplebar-auto-hide="false">
-                    <p>
-                        Custom built e-commerce website based on a sustainable bicycle oil company, using a PayPal payment API.
-                    </p>
-                    <p>
-                        I visited Green Oil's website whilst looking for eco friendly oil for maintaining my bike. 
-                        I saw it was in need of a redesign and decided it would make for an interesting VueJS project.
-                    </p>
-                    <p>
-                        Building this website gave me great insight into integrating payment methods, using PayPal on this occasion. I also added the option to toggle between Pounds Sterling and Euros currencies.
-                    </p>
-                </div>
-            </div>
-            <div class='image-container' id='gp-assistant' @click='showImage($event.currentTarget.id)'>
-                <img 
-                :srcset="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.webp') + ' 700w, '
-                 + require('@/assets/images/project-images/gp-assistant/gp-assistant-1200px.webp') + ' 1200w '"
+                :srcset="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/gp-assistant/gp-assistant-1200px.webp') + ' 1200w '"
                 :src="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.png')" 
                 alt='e-commerce website with PayPal integration' />
 
