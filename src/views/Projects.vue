@@ -138,7 +138,7 @@
             </div>
             <div class='project-links'>
                 <a target='_blank' href="https://github.com/c0llid3r/maca-website">VIEW CODE</a>
-                <a target='_blank' href="https://c0llid3r.github.io/maca-website/latestnews">VIEW LIVE</a>
+                <a target='_blank' href="https://c0llid3r.github.io/maca-website">VIEW LIVE</a>
             </div>
         </div>
     </div>
