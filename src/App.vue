@@ -21,6 +21,9 @@
                   <li class="link" id='link-contact'>
                     <router-link :to="{ name: 'Contact' }" class='links' active-class="active-link">CONTACT</router-link>
                   </li>
+                  <li class="link" id='link-blog'>
+                    <router-link :to="{ name: 'Blog' }" class='links' active-class="active-link">BLOG</router-link>
+                  </li>
               </ul>
           </div>
       </div>
