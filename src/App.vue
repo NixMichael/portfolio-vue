@@ -684,7 +684,7 @@ body {
     }
 }
 
-.about-container, .contact-container {
+.about-container, .contact-container, .blog-container {
     justify-content: flex-start;
     align-items: center;
 
@@ -1032,6 +1032,22 @@ body {
         font-size: 3rem;
         color: white;
         cursor: pointer;
+    }
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 1rem;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+    div, img {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        p {
+            font-size: 1rem;
+        }
     }
 }
 
