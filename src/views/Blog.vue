@@ -4,7 +4,7 @@
             <div>{{post.title}}</div>
 
             <img
-                :src="'https://dropbox.com/s/' + post.image + '.png'"
+                :src="'s3://nixwebdev/' + post.image + '.png'"
                 :alt="post.title" />
 
             <div><p v-html="post.body"></p></div>
