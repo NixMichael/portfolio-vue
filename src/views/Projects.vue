@@ -24,121 +24,24 @@
             <div id="projects" class='title-flow'>Projects</div>
         </div>
 
-        <div class='fader'>
+        <div class='fader' v-for="project in projects" :key="project.image_id">
             <div class='project-description'>
-                <h3>GP Assistant</h3>
+                <h3>{{project.title}}</h3>
                 <div class='description' data-simplebar data-simplebar-auto-hide="false">
-                    <p>
-                        GP appointments and messaging system, built using OOP PHP.
-                    </p>
-                    <p>
-                        Based on an existing GP system, I wanted to create a similar system but with a better user experience.
-                    </p>
-                    <p>
-                        Patients are able to log in to the system to book and cancel appointments, as well have discussions with their GP without having to attend the surgery.
-                    </p>
+                    <p v-html="project.body"></p>
                 </div>
             </div>
-            <div class='image-container' id='gp-assistant' @click='showImage($event.currentTarget.id)'>
+            <div class='image-container' :id="project.image_id" @click='showImage($event.currentTarget.id)'>
                 <img 
-                :srcset="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/gp-assistant/gp-assistant-1200px.webp') + ' 1200w '"
-                :src="require('@/assets/images/project-images/gp-assistant/gp-assistant-700px.png')" 
-                alt='GP appointment booking and messaging system' />
+                :srcset="require(`@/assets/images/project-images/${project.image_id}/${project.image_id}-700px.webp`) + ' 700w, ' + require(`@/assets/images/project-images/${project.image_id}/${project.image_id}-1200px.webp`) + ' 1200w '"
+                :src="require(`@/assets/images/project-images/${project.image_id}/${project.image_id}-700px.png`)" 
+                :alt="project.title" />
 
             </div>
             <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/gpassistant">VIEW CODE</a>
-                <a target='_blank' href="https://serene-hollows-39973.herokuapp.com/">VIEW LIVE</a>
-            </div>
-        </div>
-
-        <div class='fader'>
-            <div class='project-description'>
-                <h3>Green Oil</h3>
-                <div class='description' data-simplebar data-simplebar-auto-hide="false">
-                    <p>
-                        Custom built e-commerce website based on a sustainable bicycle oil company, using a PayPal payment API.
-                    </p>
-                    <p>
-                        I visited Green Oil's website whilst looking for eco friendly oil for maintaining my bike. 
-                        I saw it was in need of a redesign and decided it would make for an interesting VueJS project.
-                    </p>
-                    <p>
-                        Building this website gave me great insight into integrating payment methods, using PayPal on this occasion. I also added the option to toggle between Pounds Sterling and Euros currencies.
-                    </p>
-                </div>
-            </div>
-            <div class='image-container' id='green-oil' @click='showImage($event.currentTarget.id)'>
-                <img 
-                :srcset="require('@/assets/images/project-images/green-oil/green-oil-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/green-oil/green-oil-1200px.webp') + ' 1200w '"
-                :src="require('@/assets/images/project-images/green-oil/green-oil-700px.png')" 
-                alt='e-commerce website with PayPal integration' />
-
-            </div>
-            <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/green-oil">VIEW CODE</a>
-                <a target='_blank' href="https://elastic-lovelace-14cb3f.netlify.app/">VIEW LIVE</a>
-            </div>
-        </div>
-
-        <div class='fader'>
-            <div class='project-description'>
-                <h3>Medical Illustration Database</h3>
-                <div class='description' data-simplebar data-simplebar-auto-hide="false">
-                    <p>
-                        Full stack database solution built using ReactJS, NodeJS and PostgreSQL.
-                    </p>
-                    <p>
-                        This was built as a potential upgrade to an old MS Access database which had been in use since the mid 90s.
-                    </p>
-                    <p>
-                        I initially took a class based approach to building the app, but having learned how to use React Hooks and Redux I rebuilt the app to take advantage of this new approach. This was a great learning experience, reviewing my original code and discovering where it could be changed to improve the functionality and reliability of the app.
-                    </p>
-                    <p>
-                        My most complex project to date, but also the most enjoyable as I was able to really get to grips with the full capabilities of React.
-                    </p>
-                </div>
-            </div>
-            <div class='image-container' id='record-keeper' @click='showImage($event.currentTarget.id)'>
-                <img 
-                :srcset="require('@/assets/images/project-images/record-keeper/record-keeper-700px.webp') + ' 700w, ' +
-                require('@/assets/images/project-images/record-keeper/record-keeper-1200px.webp') + ' 1200w'"
-                :src="require('@/assets/images/project-images/record-keeper/record-keeper-700px.png')" 
-                alt='database built with ReactJS and Postgresql' width='100%' 
-                />
-            </div>
-            <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper">VIEW CODE (FE)</a>
-                <a target='_blank' href="https://github.com/c0llid3r/recordkeeper-api">VIEW CODE (BE)</a>
-                <a target='_blank' href="https://distracted-liskov-55fae3.netlify.app">VIEW LIVE</a>
-            </div>
-        </div>
-
-        <div class='fader'>
-            <div class='project-description'>
-                <h3>MACA</h3>
-                <div class='description' data-simplebar data-simplebar-auto-hide="false">
-                    <p>
-                        Website for vegan animal activism group 'Manchester Animal Climate Action'.
-                    </p>
-                    <p>
-                        Manchester Animal Action were in the process of rebranding to Manchester Animal Climate Action. They were also in need of a website overhaul as their original site has various design issues.
-                    </p>
-                    <p>
-                        As the site needs to be easily updated by MACA volunteers, I chose to build it using Wordpress. I created a custom theme so that I could design the site from scratch.
-                    </p>
-                </div>
-            </div>
-            <div class='image-container' id='maca' @click='showImage($event.currentTarget.id)'>
-                <img 
-                :srcset="require('@/assets/images/project-images/maca/maca-700px.webp') + ' 700w, ' + require('@/assets/images/project-images/maca/maca-1200px.webp') + ' 1200w '"
-                :src="require('@/assets/images/project-images/maca/maca-700px.png')" 
-                alt='Website for Manchester Animal Climate Action' />
-
-            </div>
-            <div class='project-links'>
-                <a target='_blank' href="https://github.com/c0llid3r/maca-website">VIEW CODE</a>
-                <a target='_blank' href="https://c0llid3r.github.io/maca-website">VIEW LIVE</a>
+                <a v-if="project.frontend_link" target='_blank' :href="project.frontend_link">VIEW CODE</a>
+                <a v-if="project.backend_link" target='_blank' :href="project.frontend_link">VIEW CODE (BACKEND)</a>
+                <a v-if="project.live_link" target='_blank' :href="project.live_link">VIEW LIVE</a>
             </div>
         </div>
     </div>
@@ -146,7 +49,20 @@
 
 <script>
 export default {
+    data () {
+        return {
+            projects: []
+        }
+    },
     methods: {
+        async fetchProjects () {
+            const response = await fetch('https://nixwebdev-api.herokuapp.com/api/projects');
+            const projects = await response.json();
+            this.projects = projects;
+            setTimeout(() => {
+                this.fadeProjects()
+            }, 50);
+        },
         showImage (imageId) {
             const imageLink = require(`@/assets/gifs/${imageId}.gif`)
             document.querySelector('.image').style.backgroundImage = `url(${imageLink})`
@@ -183,11 +99,12 @@ export default {
         }
     },
     mounted () {
+        
+        this.fetchProjects();
         window.scrollTo(0,0)
         setTimeout(() => {
             document.querySelector('.menu-toggler').checked = false
         }, 50)
-        this.fadeProjects()
 
         const description = document.querySelectorAll('.description')
 
@@ -196,6 +113,7 @@ export default {
                 description[i].scrollTop = 0
             })
         })
+
     }
 }
 </script>
