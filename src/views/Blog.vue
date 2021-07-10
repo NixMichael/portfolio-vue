@@ -1,5 +1,6 @@
 <template>
     <div id='blog' class='container blog-container'>
+        <div class='text-content'>
         <h1><span class='title-font highlight-color'>Blog</span></h1>
         <div class="post" v-for="post in posts.reverse()" :key="post">
             <div>{{post.title}} <span>({{post.created_at}})</span></div>
@@ -9,6 +10,7 @@
                 :alt="post.title" />
 
             <div><p v-html="post.body"></p></div>
+        </div>
         </div>
     </div>
 </template>
