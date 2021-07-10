@@ -4,7 +4,7 @@
             <div>{{post.title}}</div>
 
             <img
-                :src="'https://s3.console.aws.amazon.com/s3/object/nixwebdev?region=eu-west-2&prefix=' + post.image + '.png'"
+                :src="'https://nixwebdev.s3.eu-west-2.amazonaws.com/' + post.image + '.png'"
                 :alt="post.title" />
 
             <div><p v-html="post.body"></p></div>
