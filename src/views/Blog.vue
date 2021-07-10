@@ -1,7 +1,7 @@
 <template>
     <div id='blog' class='container blog-container'>
         <div class="post" v-for="post in posts.reverse()" :key="post">
-            <div>{{post.title}}</div>
+            <div>{{post.title}} <span>({{post.created_at}})</span></div>
 
             <img
                 :src="'https://nixwebdev.s3.eu-west-2.amazonaws.com/' + post.image + '.png'"
