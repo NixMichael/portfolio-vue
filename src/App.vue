@@ -1045,6 +1045,9 @@ body {
         width: 100%;
         font-size: 2rem;
         margin-bottom: 1rem;
+        span {
+            font-size: 1rem;
+        }
         p {
             font-size: 1rem;
         }
