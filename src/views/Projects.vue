@@ -59,9 +59,6 @@ export default {
             const response = await fetch('https://nixwebdev-api.herokuapp.com/api/projects');
             const projects = await response.json();
             this.projects = projects;
-            setTimeout(() => {
-                this.fadeProjects()
-            }, 50);
         },
         showImage (imageId) {
             const imageLink = require(`@/assets/gifs/${imageId}.gif`)
@@ -113,7 +110,9 @@ export default {
                 description[i].scrollTop = 0
             })
         })
-
+    },
+    updated () {
+        this.fadeProjects();
     }
 }
 </script>
