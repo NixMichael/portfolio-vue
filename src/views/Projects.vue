@@ -18,7 +18,7 @@
                 Passionate about building websites and apps with a variety of technologies, I enjoy both coding and visual design.
             </p>
             <p>
-                My skillset includes both front and backend technologies. I am experienced in Javascript and PHP as well as various frameworks and libraries (React, Vue, Laravel), writing server side code with Node.js and Express, and working with databases including MySQL and PostgreSQL.
+                My skill set includes both front and backend technologies. I am experienced in Javascript and PHP as well as various frameworks and libraries (React, Vue, Laravel), writing server side code with Node.js and Express, and working with databases including MySQL and PostgreSQL.
             </p>
             <p>Take a look at some of my projects below and don't hesitate to get in touch!</p>
             <div id="projects" class='title-flow'>Projects</div>
