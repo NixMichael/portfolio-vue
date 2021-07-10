@@ -1045,6 +1045,8 @@ body {
         width: 100%;
         font-size: 2rem;
         margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
         span {
             font-size: 1rem;
         }
