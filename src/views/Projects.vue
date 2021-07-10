@@ -40,7 +40,7 @@
             </div>
             <div class='project-links'>
                 <a v-if="project.frontend_link" target='_blank' :href="project.frontend_link">VIEW CODE</a>
-                <a v-if="project.backend_link" target='_blank' :href="project.frontend_link">VIEW CODE (BACKEND)</a>
+                <a v-if="project.backend_link" target='_blank' :href="project.backend_link">VIEW CODE (BACKEND)</a>
                 <a v-if="project.live_link" target='_blank' :href="project.live_link">VIEW LIVE</a>
             </div>
         </div>
