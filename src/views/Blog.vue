@@ -5,9 +5,9 @@
         <p>Thoughts and findings relating to web development, Linux, and anything else of interest to me.</p>
         <div class="post" v-for="post in posts.reverse()" :key="post">
             <div>{{post.title}}<span>({{post.created_at}})</span></div>
-
-            <img
-                :src="'https://nixwebdev.s3.eu-west-2.amazonaws.com/' + post.image + '.png'"
+            <img 
+                :srcset="'https://nixwebdev.s3.eu-west-2.amazonaws.com/' + post.image + '.webp' + ' 1359'"
+                :src="'https://nixwebdev.s3.eu-west-2.amazonaws.com/' + post.image + '.png'" 
                 :alt="post.title" />
 
             <div><p v-html="post.body"></p></div>

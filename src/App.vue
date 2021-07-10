@@ -1047,6 +1047,7 @@ body {
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         span {
             font-size: 1rem;
         }
