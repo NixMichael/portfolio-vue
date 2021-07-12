@@ -33,8 +33,8 @@
             </div>
             <div class='image-container' :id="project.image_id" @click='showImage($event.currentTarget.id)'>
                 <img 
-                :srcset="require(`@/assets/images/project-images/${project.image_id}/${project.image_id}-700px.webp`) + ' 700w, ' + require(`@/assets/images/project-images/${project.image_id}/${project.image_id}-1200px.webp`) + ' 1200w '"
-                :src="require(`@/assets/images/project-images/${project.image_id}/${project.image_id}-700px.png`)" 
+                :srcset="'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '-700px.webp' + ' 700w, ' + 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '-1200px.webp' + ' 1200w '"
+                :src="'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '-700px.png'" 
                 :alt="project.title" />
 
             </div>
@@ -61,7 +61,7 @@ export default {
             this.projects = projects;
         },
         showImage (imageId) {
-            const imageLink = require(`@/assets/gifs/${imageId}.gif`)
+            const imageLink = 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project-images/' + imageId + '.gif';
             document.querySelector('.image').style.backgroundImage = `url(${imageLink})`
             document.querySelector('.fullscreen').style.display = 'flex'
         },
