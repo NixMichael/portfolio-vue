@@ -33,8 +33,8 @@
             </div>
             <div class='image-container' :id="project.image_id" @click='showImage($event.currentTarget.id)'>
                 <img 
-                :srcset="'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '-700.webp' + ' 700w, ' + 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '-1200.webp' + ' 1200w '"
-                :src="'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '-700.png'" 
+                :srcset="'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '_700.webp' + ' 700w, ' + 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '_1200.webp' + ' 1200w '"
+                :src="'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + project.image_id + '_700.png'" 
                 :alt="project.title" />
 
             </div>
