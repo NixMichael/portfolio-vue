@@ -24,7 +24,7 @@
             <div id="projects" class='title-flow'>Projects</div>
         </div>
 
-        <div class='fader' v-for="project in projects" :key="project.image_id">
+        <div class='fader' v-for="project in projects.reverse()" :key="project.image_id">
             <div class='project-description'>
                 <h3>{{project.title}}</h3>
                 <div class='description' data-simplebar data-simplebar-auto-hide="false">
