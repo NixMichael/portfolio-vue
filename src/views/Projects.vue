@@ -61,7 +61,7 @@ export default {
             this.projects = projects;
         },
         showImage (imageId) {
-            const imageLink = 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project-images/' + imageId + '.gif';
+            const imageLink = 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + imageId + '.gif';
             document.querySelector('.image').style.backgroundImage = `url(${imageLink})`
             document.querySelector('.fullscreen').style.display = 'flex'
         },
