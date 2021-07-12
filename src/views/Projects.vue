@@ -58,7 +58,7 @@ export default {
         async fetchProjects () {
             const response = await fetch('https://nixwebdev-api.herokuapp.com/api/projects');
             const projects = await response.json();
-            this.projects = projects;
+            this.projects = projects.reverse();
         },
         showImage (imageId) {
             const imageLink = 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + imageId + '.gif';
