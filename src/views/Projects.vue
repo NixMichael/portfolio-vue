@@ -95,7 +95,7 @@ export default {
             })
         }
     },
-    beforeMount () {
+    created () {
         this.fetchProjects();
     },
     mounted () {
