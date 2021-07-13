@@ -10,10 +10,10 @@
             </div>
 
             <h3 id="history"><br><br><br>History</h3>
-            <p class='first-para'>My fascination with computers and programming reaches as far back as my very early teens when I inherited a BBC MICRO. I figured out how to fill the screen with text using a loop and was immediately hooked. Over the next few years I found more and more to love about computers with both the hardware and software side of things.</p>
-            <p>The first language I learnt in depth was Visual Basic, mostly using it to create simple games. Once I had an internet connection I discovered HTML and began experimenting, tweaking existing web pages and building my own with the Windows text editor. My interest grew and grew as I learned about other programming languages and the existence of open source Linux based operating systems.</p>
-            <p>At some point during college I became interested in photography. This led me to quite an abrupt but rewarding decision to switch from a maths and computing course to a photography and multimedia degree, achieving a BSc (Hons) in Photography and Media Production. Soon after graduating I began working as a clinical photographer in the NHS.</p>
-            <p>Throughout my clinical photography career my interest in web development continued. Over the years I built websites for colleagues and a number of portfolio sites for my photography.</p>
+            <p class='first-para'>My fascination with computers and programming began back in my early teens when I inherited a BBC MICRO. I figured out how to fill the screen with text using a loop and was immediately hooked. Over the next few years I found more and more to love about computers with both the hardware and software side of things.</p>
+            <p>The first language I learnt in depth was Visual Basic, mostly using it to create simple games. Once I had an internet connection I discovered HTML and began experimenting, tweaking existing web pages and building my own with the Notepad. My interest grew and grew as I learned about other programming languages and the existence of open source Linux based operating systems.</p>
+            <p>At some point during college I became interested in photography. This led me to quite an abrupt but rewarding decision to switch from a maths and computing degree to photography and multimedia production, achieving a BSc (Hons). Soon after graduating I began working as a clinical photographer in the NHS.</p>
+            <p>Throughout my clinical photography career my interest in web development continued. Over the years I built websites for colleagues and numerous portfolio sites for my photography.</p>
             <p>In 2019, having spent over ten years as a clinical photographer, I found myself being drawn back to web development with even more enthusiasm than before.</p>
             <h3 id="coding-skills"><br><br><br>Coding Skills</h3>
             <p>I have experience in the following:</p>
@@ -24,9 +24,9 @@
                     <li>jQuery</li>
                     <li>PHP</li>
                     <li>Laravel</li>
-                    <li>ReactJS + Redux</li>
-                    <li>VueJS + Vuex</li>
-                    <li>NodeJS</li>
+                    <li>React.js + Redux</li>
+                    <li>Vue.js + Vuex</li>
+                    <li>Node.js</li>
                     <li>Webpack</li>
                     <li>Using and building APIs</li>
                     <li>Relational databases including MySQL and PostgreSQL</li>
@@ -34,7 +34,7 @@
                     <li>Git and GitHub for version control</li>
                 </ul>
 
-            <p>I began my transition back into web development by first of all focusing on my JavaScript skills. Once I felt confident with my abilities I moved on to React which really opened my eyes to the possibilities of modern web development. From there I learnt to build similar products using Vue, and soon after delved back into PHP and began experimenting with Laravel. The learning never ends and never gets dull.</p>
+            <p>I began my transition back into web development by first of all focusing on my JavaScript skills. Once I felt confident with my abilities I moved on to React.js which really opened my eyes to the possibilities of modern web development. From there I learnt to build similar front-end interfaces using Vue.js, and soon after delved back into PHP and began experimenting with Laravel.</p>
             <h3 id="design-skills"><br><br><br>Design Skills</h3>
             <p>Having trained and worked as a photographer and videographer, I also have extensive experience using creative editing software. I have been using Adobe products for over fifteen years, including Photoshop, Illustrator and Premiere Pro. I also have experience with similar software including Inkscape and GIMP.</p>
             <img style='width: 40%; max-width: 400px' src='@/assets/graphics/adobe-logos.png' alt='design software experience'>
