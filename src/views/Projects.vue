@@ -95,9 +95,10 @@ export default {
             })
         }
     },
-    mounted () {
-        
+    beforeMount () {
         this.fetchProjects();
+    },
+    mounted () {
         window.scrollTo(0,0)
         setTimeout(() => {
             document.querySelector('.menu-toggler').checked = false
