@@ -10,7 +10,9 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vue-simple-spinner": "^1.2.10",
+    "vue-spinner-component": "^1.0.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

@@ -159,25 +159,16 @@ body {
 
     .text-content {
 
-        .fulltitle {
+        .full-title {
             display: flex;
             
-            .subtitle {
+            .sub-title {
                 margin-top: 5.5em;
                 margin-left: -5em;
             }
         }
         span {
             font-size: 1em;
-        }
-
-        #snake {
-            padding: 0;
-            text-decoration: underline;
-            cursor: url('./assets/graphics/cursor.png'), pointer;
-            &:hover {
-                text-decoration: none;
-            }
         }
 
         .title-font {
@@ -194,10 +185,6 @@ body {
 
         .larger-title {
             font-size: 4rem;
-        }
-
-        .first-para {
-            margin-top: -1em;
         }
     }
 
@@ -1432,8 +1419,11 @@ body {
     body {
         font-size: 1.5rem;
 
-        .text-content .fulltitle .subtitle {
+        .text-content .full-title .sub-title {
             margin-top: 4.5em;
+        }
+        .full-title {
+            margin-bottom: 1rem;
         }
     }
 

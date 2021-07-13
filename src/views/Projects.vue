@@ -3,18 +3,18 @@
         <div class="image"></div>
         <div class="close-fullscreen" @Click="closeFullScreen()"><strong>X</strong></div>
     </div>
-    <div id='projects' class='container projects-container'>
+    <div class="container">
         <div class='text-content'>
-            <div class='fulltitle'>
+            <div class='full-title'>
                 <div>
                     <h3 class='title-font highlight-color larger-title'>Hello!</h3>
                 </div>
-                <div class="subtitle">
+                <div class="sub-title">
                     <h3>I'm Michael,</h3>
                     <h3>&nbsp;&nbsp;&nbsp;a web developer based in Manchester, UK.</h3>
                 </div>
             </div>
-            <p class='first-para'>
+            <p>
                 Passionate about building websites and apps with a variety of technologies, I enjoy both coding and visual design.
             </p>
             <p>
@@ -24,10 +24,11 @@
             <div id="projects" class='title-flow'>Projects</div>
         </div>
 
+        <div id='projects' class='container projects-container' v-if="projects.length > 0">
         <div class='fader' v-for="project in projects" :key="project.image_id">
-            <div class='project-description'>
+            <div class="project-description">
                 <h3>{{project.title}}</h3>
-                <div class='description' data-simplebar data-simplebar-auto-hide="false">
+                <div class="description" data-simplebar data-simplebar-auto-hide="false">
                     <p v-html="project.body"></p>
                 </div>
             </div>
@@ -44,11 +45,20 @@
                 <a v-if="project.live_link" target='_blank' :href="project.live_link">VIEW LIVE</a>
             </div>
         </div>
+        </div>
+        <div v-else><Spinner class="spinner" :size="80" :depth="10" color="#d387bc"/></div>
     </div>
 </template>
 
 <script>
+import Spinner from 'vue-spinner-component/src/Spinner.vue';
+import Loading from '@/components/Loading.vue'
+
 export default {
+    components: {
+        Spinner,
+        Loading
+    },
     data () {
         return {
             projects: []
@@ -103,17 +113,24 @@ export default {
         setTimeout(() => {
             document.querySelector('.menu-toggler').checked = false
         }, 50)
+    },
+    updated () {
+        this.fadeProjects();
 
+        // Scroll description text back to top when hover away
         const description = document.querySelectorAll('.description')
 
         document.querySelectorAll('.project-description').forEach((el, i) => {
             el.addEventListener('mouseleave', () => {
-                description[i].scrollTop = 0
+                description[i].scrollTop = 0;
             })
         })
-    },
-    updated () {
-        this.fadeProjects();
     }
 }
 </script>
+
+<style scoped>
+    .spinner {
+        margin-top: 4rem;
+    }
+</style>

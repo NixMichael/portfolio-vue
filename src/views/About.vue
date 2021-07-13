@@ -1,7 +1,7 @@
 <template>
     <div id='about' class='container about-container'>
         <div class='text-content'>
-            <h1><span class='title-font highlight-color'>Experience</span></h1>
+            <div class="full-title"><h1><span class='title-font highlight-color'>Experience</span></h1></div>
 
             <div class="experience-links">
                 <a class="experience-buttons" href="#history">HISTORY</a>
