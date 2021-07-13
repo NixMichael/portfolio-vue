@@ -58,6 +58,7 @@ export default {
   },
   methods: {
     toggleDarkMode () {
+        let darkMode = false;
         const logo = document.getElementById('logo')
         const toggler = document.getElementById('darkmode-toggler')
         const scrollIcon = document.getElementById('scroll-to-top')
@@ -761,6 +762,30 @@ body {
     }
 }
 
+.blog-container {
+    .post {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+        padding: 1rem;
+        box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+        div, img {
+            width: 100%;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
 #about {
     display: flex;
 }
@@ -1019,28 +1044,6 @@ body {
         font-size: 3rem;
         color: white;
         cursor: pointer;
-    }
-}
-
-.post {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0;
-    padding: 1rem;
-    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
-    div, img {
-        width: 100%;
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        span {
-            font-size: 1rem;
-        }
-        p {
-            font-size: 1rem;
-        }
     }
 }
 
@@ -1358,6 +1361,15 @@ body {
         -moz-user-select: none;
         -ms-user-select: none;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .blog-container {
+        .post {
+            width: 100%;
+            box-shadow: none;
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+        }
     }
 
     .footer {
