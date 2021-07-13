@@ -30,8 +30,10 @@ export default {
            this.posts = posts.reverse();
         }
     },
-    mounted () {
+    created () {
         this.getPosts();
+    },
+    mounted () {
         window.scrollTo(0,0)
         setTimeout(() => {
             document.querySelector('.menu-toggler').checked = false
