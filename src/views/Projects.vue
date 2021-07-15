@@ -52,12 +52,10 @@
 
 <script>
 import Spinner from 'vue-spinner-component/src/Spinner.vue';
-import Loading from '@/components/Loading.vue'
 
 export default {
     components: {
-        Spinner,
-        Loading
+        Spinner
     },
     data () {
         return {
