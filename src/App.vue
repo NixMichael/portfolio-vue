@@ -119,8 +119,6 @@ export default {
 
 <style lang="scss">
 
-@use '@/scss/_colors.scss' as *;
-
 *, *::before, *::after {
     margin: 0;
     padding: 0;

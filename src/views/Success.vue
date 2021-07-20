@@ -18,8 +18,6 @@ export default {
 
 <style lang="scss" scoped>
 
-@use '@/scss/_colors.scss' as *;
-
   .success-container {
         position: absolute;
         top: 50%;

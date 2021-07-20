@@ -56,26 +56,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '@/scss/_colors.scss' as *;
 
-.about-container {
-    .experience-links {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-        margin: 0 auto;
+    .about-container {
+        .experience-links {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            margin: 0 auto;
 
-        .experience-buttons {
-            margin: 0 1.5em;
-            padding: 0.5em 1em;
-            text-decoration: none;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.5);
-            box-shadow: 0 5px 10px 1px rgba(0,0,0,0.3);
+            .experience-buttons {
+                margin: 0 1.5em;
+                padding: 0.5em 1em;
+                text-decoration: none;
+                border-radius: 10px;
+                background: rgba(255,255,255,0.5);
+                box-shadow: 0 5px 10px 1px rgba(0,0,0,0.3);
+            }
         }
     }
-}
+
     @media screen and (max-width: 350px) {
         .about-container .experience-links {
             flex-wrap: wrap;

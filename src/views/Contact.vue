@@ -65,9 +65,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '@/scss/_colors.scss' as *;
 
-    .contact-container {
+.contact-container {
         & > div {
             margin-top: 8vh;
             display: flex;

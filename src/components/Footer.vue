@@ -9,7 +9,6 @@
 </template>
 
 <style lang="scss" scoped>
-@use '@/scss/_colors.scss' as *;
 
     .footer {
         position: fixed;

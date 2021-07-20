@@ -129,8 +129,6 @@ export default {
 
 <style lang="scss" scoped>
 
-    @use '@/scss/_colors.scss' as *;
-
     .spinner {
         margin-top: 4rem;
     }
