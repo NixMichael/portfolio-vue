@@ -54,3 +54,42 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@use '@/scss/_colors.scss' as *;
+
+.about-container {
+    .experience-links {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+
+        .experience-buttons {
+            margin: 0 1.5em;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.5);
+            box-shadow: 0 5px 10px 1px rgba(0,0,0,0.3);
+        }
+    }
+}
+    @media screen and (max-width: 350px) {
+        .about-container .experience-links {
+            flex-wrap: wrap;
+            .experience-buttons {
+                margin: 0.5em 1em;
+            }
+        }
+    }
+
+    @media screen and (min-width: 3000px) {
+       .experience-links .experience-buttons {
+            background: $darkmode-bg-color;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 2px 8px 1px rgba(255, 255, 255, 0.3);
+        }
+    }
+</style>

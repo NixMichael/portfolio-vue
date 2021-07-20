@@ -63,3 +63,79 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+@use '@/scss/_colors.scss' as *;
+
+    .contact-container {
+        & > div {
+            margin-top: 8vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            & > div {
+                align-self: center;
+                margin: -3em 0 1em;
+            }
+            form {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+
+                & > input, & > textarea {
+                    font-family: 'Montserrat', sans-serif;
+                    margin-bottom: 1rem;
+                    font-size: 1em;
+                    outline: none;
+                    border-top-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    border: none;
+                    background: rgba($darkmode-bg-color, 0.85);
+                    border: 1px solid $lightmode-bg-color;
+                    color: white;
+                    padding: 0.5rem;
+
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+
+                button {
+                    width: 100px;
+                    margin: 1rem auto 0;
+                    background: rgba($darkmode-bg-color, 0.85);
+                    padding: 0.5rem;
+                    border: 1px solid white;
+                    color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    &:hover, &:focus {
+                        box-shadow: 0 0 3px 3px rgba(255,255,255,0.4);
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                }
+            }
+        }
+    }
+
+@media screen and (max-width: 750px) {
+    .contact-container {
+        & > div {
+            & > div {
+                width: 80%;
+                align-self: center;
+                margin-bottom: 2rem;
+            }
+            form {
+                width: 80%;
+                align-self: center;
+            }
+        }
+    }
+}
+</style>

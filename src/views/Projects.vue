@@ -127,8 +127,394 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+    @use '@/scss/_colors.scss' as *;
+
     .spinner {
         margin-top: 4rem;
     }
+
+    .text-content {
+
+        .larger-title {
+            font-size: 3em;
+        }
+
+        .full-title {
+        display: flex;
+
+            .sub-title {
+                margin-top: 5.5em;
+                margin-left: -5em;
+            }
+        }
+    }
+
+    .fader {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 55%;
+        max-width: 1600px;
+        opacity: 0;
+        color: black;
+        background-color: $fader-bg-color;
+        margin-bottom: 4em;
+        padding: 1.5em 0.5em;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px 0px rgba($primary, 0.95);
+        transform: translateX(25vw);
+        transition: transform 650ms ease-out, opacity 250ms ease-in, width 400ms ease-in-out;
+        
+        .project-description {
+            border-bottom: 0.5rem solid $fader-bg-color;
+            align-self: center;
+            position: relative;
+            width: calc(100% - 5rem);
+            margin: 0 2.5rem;
+            height: 5em;
+            overflow: hidden;
+            background-color: rgba(255,255,255,0);
+            outline: 10px solid rgba(255,255,255,0);
+            transition: background-color 600ms ease, outline 500ms ease;
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            &::after {
+                position: absolute;
+                content: '[Read more...]';
+                text-align: left;
+                bottom: 0;
+                padding-top: 0.2em;
+                left: 0;
+                width: 100%;
+                height: 1.5em;
+                font-size: 0.8em;
+                background-color: $fader-bg-color;
+            }
+
+            & > div {
+                margin-top: 0.25rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .description {
+                overflow: hidden;
+                font-size: 1em;
+                padding-bottom: 1em;
+                position: relative;
+                height: 3.7rem;
+
+                & ~ div {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+
+            .close-description {
+                position: absolute;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                top: -25px;
+                right: 10px;
+                color: black;
+                cursor: pointer;
+            }
+
+            &:hover {
+                position: absolute;
+                text-align: center;
+                padding-top: 1rem;
+                width: 100%;
+                height: 85%;
+                z-index: 50;
+                white-space: normal;
+                overflow: visible;
+                width: calc(100% - 2rem);
+                margin: 1.5em auto;
+                border: none;
+
+                &::after {
+                    display: none;
+                }
+
+                & + .image-container {
+                    margin-top: 6em;
+                    opacity: 0.05;
+                    transition: opacity 600ms ease-out;
+                }
+
+                h3 {
+                    font-size: 1.5em;
+                }
+
+                .description {
+                    text-align: center;
+                    font-size: 1.2em;
+                    margin-top: 1em;
+                    padding: 0 15%;
+                    white-space: normal;
+                    height: 70%;
+                    overflow-y: auto;
+                    transition: margin-top 600ms ease-in-out;
+
+                    p {
+                        margin-top: 0.5rem;
+                    }
+
+                    p:first-child::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .image-container {
+            position: relative;
+            background-color: $lightmode-bg-color;
+            margin-bottom: 0.5rem;
+            z-index: 0;
+            width: 100%;
+            cursor: pointer;
+
+            img {
+            width: 100%;
+            }
+
+            &::before, &::after {
+                position: absolute;
+                content: '';
+                bottom: 12px;
+                width: 45%;
+                height: 20px;
+                background: rgba(0,0,0,0.3);
+                box-shadow: 0 0 5px 8px rgba(0,0,0,0.3);
+                z-index: -1;
+            }
+
+            &::before {
+                left: 10px;
+                transform: rotate(-2deg);
+            }
+
+            &::after {
+                right: 10px;
+                transform: rotate(2deg);
+            }
+
+            img {
+                box-shadow: 0 0 5px 0 rgba(0,0,0,0.35);
+            }
+        }
+
+        .project-links {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+
+            a {
+                max-width: 45%;
+                max-height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0,0,0,0.05);
+                outline: 1px solid $highlightFont;
+                outline-offset: -1px;
+                padding: 1em;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                position: relative;
+                
+                &:hover {
+                    outline-offset: 4px;
+                    outline: 1px solid $fader-bg-color;
+                    background-color: rgba($highlightFont, 0.8);
+                    transition: outline-offset 200ms ease-out, outline 200ms ease-in-out 100ms;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $highlightFont;
+                    }
+                }
+            }
+        }
+    }
+
+    .appear {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .fullscreen {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 99;
+
+        .image {
+            width: 75vw;
+            height: 50vw;
+            max-width: 75vw;
+            max-height: 75vh;
+            opacity: 1;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transition: opacity 800ms ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .close-fullscreen {
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            top: 2vh;
+            right: 2vh;
+            width: 60px;
+            height: 60px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (hover: none) {
+        .fullscreen {
+            .image {
+                opacity: 1;
+            }
+
+            .close-fullscreen {
+                display: flex;
+            }
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .fader {
+            width: 95%;
+            max-width: 550px;
+            clip-path: none;
+
+            .project-description {
+                height: 4.2rem;
+                border-bottom: 0.5rem solid rgba(243, 239, 239, 0);
+
+                &:hover {
+                    margin: 0;
+                    padding-top: 0;
+                    width: 100%;
+                    height: 75%;
+                    border-bottom: none;
+
+
+                    & + .image-container {
+                        margin-top: 4.5rem;
+                    }
+
+                    h3 {
+                        font-size: 1.2rem;
+                    }
+
+                    & > div {
+                        margin: 0.5rem;
+                    }
+                }
+            }
+
+            .image-container {
+                &::before, &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .fullscreen .close-fullscreen {
+            width: 40px;
+            height: 40px;
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        .fader {
+            .image-container {
+                margin: 1rem 1rem 1.5rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1900px) {
+
+        .full-title {
+            margin-bottom: 1rem;
+            .sub-title {
+                margin-top: 4.5em;
+            }
+        }
+
+        .projects-container {
+            .fader {
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                .image-container {
+                    &::before, &::after {
+                        bottom: 15px;
+                        width: 75%;
+                    }
+            
+                    &::before {
+                        transform: rotate(-1deg);
+                    }
+            
+                    &::after {
+                        transform: rotate(1deg);
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media screen and (min-width: 3000px) {
+
+        .fader {
+            padding: 3rem 4rem;
+            font-size: 1em;
+
+            .project-description::after {
+                bottom: 0.2em;
+            }
+
+            .image-container::before, .image-container::after {
+                bottom: 15px;
+            }
+        }
+    }
+
 </style>
