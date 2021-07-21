@@ -56,23 +56,30 @@ export default {
   components: {
     Footer
   },
+  data () {
+      return {
+          darkMode: false
+      }
+  },
   methods: {
     toggleDarkMode () {
-        let darkMode = false;
+        this.darkMode = !this.darkMode
+        console.log(this.darkMode)
+        
         const logo = document.getElementById('logo')
         const toggler = document.getElementById('darkmode-toggler')
         const scrollIcon = document.getElementById('scroll-to-top')
 
         if (document.body.clientWidth <= 750) {
-            const logoSource = darkMode
-            ? require('@/assets/graphics/LogoDark-500px.png')
-            : require('@/assets/graphics/LogoLight-500px.png')
+            const logoSource = this.darkMode
+            ? require('@/assets/graphics/LogoLight-500px.png')
+            : require('@/assets/graphics/LogoDark-500px.png')
             logo.src = logoSource
         } else {
             logo.src = require('@/assets/graphics/LogoLight-500px.png')
         }
 
-        scrollIcon.src = darkMode ? require('@/assets/graphics/scroll-to-top.png') : require('@/assets/graphics/scroll-to-top-white.png')
+        scrollIcon.src = this.darkMode ? require('@/assets/graphics/scroll-to-top.png') : require('@/assets/graphics/scroll-to-top-white.png')
 
         toggler.style.justifyContent = toggler.style.justifyContent !== 'flex-end' 
         ? 'flex-end' : 'flex-start'
@@ -82,8 +89,6 @@ export default {
         setTimeout(() => {
             document.querySelector('.menu-toggler').checked = false
         }, 400)
-
-        darkMode = !darkMode
     },
     closeMenu () {
       setTimeout(() => {
@@ -659,8 +664,8 @@ body {
 
 @media screen and (max-width: 350px) {
 
-    .logo {
-        width: 0;
+    .header .banner .logo {
+        display: none;
     }
 }
 

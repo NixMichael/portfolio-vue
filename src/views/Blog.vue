@@ -85,7 +85,6 @@ export default {
 @media screen and (max-width: 750px) {
     .blog-container {
         .post {
-            font-size: 2em;
             width: 100%;
             box-shadow: none;
             background-color: rgba(255, 255, 255, 0.15);
