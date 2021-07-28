@@ -1,6 +1,6 @@
 <template>
     <div class='fullscreen'>
-        <div class="image">
+        <div class="preview">
             <video id="video-preview" autoplay loop>
                 <source src="" type="video/mp4">
             </video>
@@ -371,6 +371,16 @@ export default {
         align-items: center;
         background-color: rgba(0,0,0,0.9);
         z-index: 99;
+
+        .preview {
+            height: 720px;
+            max-height: 90vh;
+            width: auto;
+
+            #video-preview {
+                height: 100%;
+            }
+        }
 
         .close-fullscreen {
             position: absolute;
