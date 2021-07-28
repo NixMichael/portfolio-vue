@@ -1,6 +1,10 @@
 <template>
     <div class='fullscreen'>
-        <div class="image"></div>
+        <div class="image">
+            <video id="video-preview" autoplay="true">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
         <div class="close-fullscreen" @Click="closeFullScreen()"><strong>X</strong></div>
     </div>
     <div class="container">
@@ -69,9 +73,9 @@ export default {
             this.projects = projects.reverse();
         },
         showImage (imageId) {
-            const imageLink = 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_images/' + imageId + '.gif';
-            document.querySelector('.image').style.backgroundImage = `url(${imageLink})`
-            document.querySelector('.fullscreen').style.display = 'flex'
+            document.querySelector('#video-preview > source').src = 'https://nixwebdev.s3.eu-west-2.amazonaws.com/project_videos/' + imageId + '.mp4';
+            document.querySelector('.fullscreen').style.display = 'flex';
+            document.querySelector('#video-preview').load();
         },
         closeFullScreen () {
             document.querySelector('.fullscreen').style.display = 'none'
