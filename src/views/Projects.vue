@@ -1,7 +1,7 @@
 <template>
     <div class='fullscreen'>
         <div class="image">
-            <video id="video-preview" autoplay="true">
+            <video id="video-preview" autoplay loop>
                 <source src="" type="video/mp4">
             </video>
         </div>
@@ -372,22 +372,6 @@ export default {
         background-color: rgba(0,0,0,0.9);
         z-index: 99;
 
-        .image {
-            width: 75vw;
-            height: 50vw;
-            max-width: 75vw;
-            max-height: 75vh;
-            opacity: 1;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            transition: opacity 800ms ease;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-
         .close-fullscreen {
             position: absolute;
             justify-content: center;
@@ -404,9 +388,6 @@ export default {
 
     @media screen and (hover: none) {
         .fullscreen {
-            .image {
-                opacity: 1;
-            }
 
             .close-fullscreen {
                 display: flex;
