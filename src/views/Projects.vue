@@ -375,10 +375,12 @@ export default {
         .preview {
             height: 720px;
             max-height: 90vh;
+            max-width: 90vw;
             width: auto;
 
             #video-preview {
                 height: 100%;
+                max-width: 100%;
             }
         }
 
